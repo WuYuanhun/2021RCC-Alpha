@@ -15,6 +15,8 @@ import frc.robot.Constants.CanId;
 
 public class Feeder extends SubsystemBase {
 
+  private static final Logger logger = Logger.getLogger("frc.subsystems.feeder");
+
   private VictorSPX m_feeder_tvictor_left = new VictorSPX(CanId.MOTOR_FEEDER_LEFT);
   private VictorSPX m_feeder_tvictor_right = new VictorSPX(CanId.MOTOR_FEEDER_RIGHT);
 

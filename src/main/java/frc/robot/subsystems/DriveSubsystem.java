@@ -25,6 +25,9 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.Constants.CanId;
 import frc.robot.Constants.Deadband;
 public class DriveSubsystem extends SubsystemBase {
+
+  private static final Logger logger = Logger.getLogger("frc.subsystems.drive");
+
   private WPI_TalonFX m_leftMotorFront = new WPI_TalonFX(CanId.DRIVE_LEFT_FRONT);
   private WPI_TalonFX m_leftMotorBack = new WPI_TalonFX(CanId.DRIVE_LEFT_BACK);
   private WPI_TalonFX m_rightMotorFront = new WPI_TalonFX(CanId.DRIVE_RIGHT_FRONT);
@@ -57,9 +60,6 @@ public class DriveSubsystem extends SubsystemBase {
 
   private boolean climbing_left = false;
   private boolean climbing_right = false;
-
-
-  private final Logger logger = Logger.getLogger("frc.subsystems.drive");
 
   public DriveSubsystem() {
     // logger.setLevel(Level.OFF);

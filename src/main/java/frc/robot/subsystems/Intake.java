@@ -4,9 +4,11 @@
 
 package frc.robot.subsystems;
 import frc.robot.Constants.CanId;
-import frc.robot.subsystems.PneumaticSubsystem;
 
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
+import java.util.logging.Logger;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 
@@ -15,6 +17,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 
 public class Intake extends SubsystemBase {
+
+  private static final Logger logger = Logger.getLogger("frc.subsystems.intake");
+  
   /** Creates a new Intake. */
   private double kintakeSpeed;
   private VictorSPX m_intake_motor = new VictorSPX(CanId.MOTOR_INTAKE);

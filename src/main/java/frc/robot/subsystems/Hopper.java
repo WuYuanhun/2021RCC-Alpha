@@ -6,6 +6,9 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
+import java.util.logging.Logger;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -16,6 +19,9 @@ import frc.robot.Constants.CanId;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
 public class Hopper extends SubsystemBase {
+
+  private static final Logger logger = Logger.getLogger("frc.subsystems.hopper");
+
 
   private double khopperSpeed;
   private Joystick m_rightJoy = new Joystick(1);

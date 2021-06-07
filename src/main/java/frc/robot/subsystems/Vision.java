@@ -6,8 +6,6 @@ package frc.robot.subsystems;
 
 import java.util.logging.Logger;
 
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
-
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
@@ -19,7 +17,6 @@ public class Vision extends SubsystemBase {
   private NetworkTableEntry tY;
   private NetworkTableEntry tV;
   private NetworkTableEntry ledMode;
-  private NetworkTableEntry camMode;
   private static double m_headingError;
   private static double m_VerticalError;
   private static boolean m_getValidTarget;
@@ -42,7 +39,6 @@ public class Vision extends SubsystemBase {
     tY = table.getEntry("tY");
     tV = table.getEntry("tv");
     ledMode = table.getEntry("ledMode");
-    camMode = table.getEntry("camMode");
 
     SmartDashboard.putNumber("AutoAim", 0);
   }

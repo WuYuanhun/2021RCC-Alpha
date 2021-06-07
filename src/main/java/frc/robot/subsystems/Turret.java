@@ -9,10 +9,8 @@ import java.util.logging.Logger;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
-import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import frc.robot.Constants.*;
 
@@ -23,7 +21,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Turret extends SubsystemBase {
 
-  private final Logger logger = Logger.getLogger("frc.subsystems.turret");
+  private static final Logger logger = Logger.getLogger("frc.subsystems.turret");
 
   public WPI_TalonSRX m_turret_motor = new WPI_TalonSRX(CanId.MOTOR_TURRET);
   public TalonSRXConfiguration configTurret = new TalonSRXConfiguration();

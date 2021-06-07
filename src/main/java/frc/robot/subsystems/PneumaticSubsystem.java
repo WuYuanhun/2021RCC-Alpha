@@ -18,7 +18,7 @@ import frc.robot.Constants.PneumaticConstants;
 import frc.robot.Constants.PneuStatus;
 
 public class PneumaticSubsystem extends SubsystemBase {
-  private static Logger logger = Logger.getLogger("frc.subsystems.Pneumatic");
+  private static final Logger logger = Logger.getLogger("frc.subsystems.pneumatic");
 
   private Compressor m_compressor = new Compressor(Ports.kPCMPort);
   private DoubleSolenoid m_ds_base = new DoubleSolenoid(Ports.kPCMPort, PneumaticConstants.kBaseF, PneumaticConstants.kBaseR);

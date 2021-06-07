@@ -7,6 +7,8 @@
 
 package frc.robot.subsystems;
 
+import java.util.logging.Logger;
+
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
@@ -33,6 +35,9 @@ import frc.robot.Constants.Converters;
 
 @SuppressWarnings({ "all" })
 public class Shooter extends SubsystemBase {
+
+  private static final Logger logger = Logger.getLogger("frc.subsystems.shooter");
+
   private double targetSpeed = 6200;
   private double targetAngle;
 

@@ -25,7 +25,8 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.Constants.*;
 
 public class Hood extends SubsystemBase {
-  private static Logger logger = Logger.getLogger("frc.subsystems.Hood");
+  private static final Logger logger = Logger.getLogger("frc.subsystems.hood");
+
   private CANSparkMax m_hood_motor = new CANSparkMax(CanId.MOTOR_HOOD, MotorType.kBrushless);
   private CANPIDController m_pidController;
   private CANEncoder m_encoder; // 0 ~ -9.5 (raw)
