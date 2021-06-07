@@ -27,7 +27,6 @@ import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
 import frc.robot.Constants.PneuStatus;
 import frc.robot.commands.*;
 import frc.robot.subsystems.*;
-import frc.robot.utils.SleepCommand;
 import frc.robot.utils.TriggerToBoolean;
 
 
@@ -40,11 +39,7 @@ import frc.robot.utils.TriggerToBoolean;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private static Logger logger = Logger.getLogger("frc.RobotContainer");
-
-  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-
+  
   public final DriveSubsystem m_drive = new DriveSubsystem();
   private final PneumaticSubsystem m_pneumatic = new PneumaticSubsystem();
   private final Shooter m_shooter = new Shooter();
